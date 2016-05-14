@@ -108,6 +108,10 @@
 #login-box {
   display: none;
 }
+iframe {
+  display: none;
+  position: absolute;
+}
 .secondary-section {
   margin-top: 280px;
 }
@@ -152,10 +156,13 @@ div#image-block #play-button {
 }
 #block-1 {
   text-align: center;
-  height: 280px;
+  height: 320px;
   order: -1;
+  display: flex;
+  flex-direction: column;
+  // position: relative;
 }
-#block-1 > img {
+#block-1 img {
   height: 80px;
   width: 80px;
 }
@@ -169,12 +176,20 @@ div#image-block #play-button {
   border-radius: 50%;
   padding: 15px;
 }
+.section-top {
+  flex-grow: 1; /* Fill available space (place next element at bottom) */
+}
+#log-in-status {
+  display: none;
+  margin-top: 15px;
+  font-family: arial;
+}
 .section-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  // bottom: 0px;
 }
-
 .section-footer div {
   text-align: center;
 }

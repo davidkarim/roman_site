@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
+
+  get 'users/new'
+
+  get 'users/create'
+
+  resources :sessions, only: [:new, :create, :destroy]
+
   get 'main/index'
 
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
+  # get 'sessions/new'
+  # get 'sessions/destroy'
 
   resources :samples
   # The priority is based upon order of creation: first created -> highest priority.

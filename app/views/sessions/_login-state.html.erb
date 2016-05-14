@@ -1,0 +1,5 @@
+<% if logged_in == "false" %>
+  <span>You are not logged in</span>
+<% else %>
+  <span><%= current_user.email %></span>
+<% end %>

@@ -1,12 +1,8 @@
-function testfunc() {
-  console.log("This is a test");
-  alert("HHHHH");
-}
 $(function() {
   // alert("Page Load");
 
   $("#login-button").click(function() {
-    console.log("This is a test");
+    console.log("Login button to display form has been clicked!!!");
     // alert("Click event");
     $("#login-box").fadeIn();
   });
@@ -14,6 +10,26 @@ $(function() {
   $("#login-button-close").click(function() {
     $("#login-box").fadeOut();
   });
+
+  $("#login-form").on("ajax:success", updateTask);
+
+  function updateTask() {
+    console.log("We recevied an AJAX success response!!");
+    console.log(arguments);
+    console.log(arguments[1].errors)
+    if (arguments[1].errors) {
+      $("#log-in-status").show();
+      $("#log-in-status").html("You are not logged in");
+      $("#login-button").html("LOG IN");
+      $("#login-box").fadeOut();
+    } else {
+      $("#log-in-status").show();
+      $("#log-in-status").html(arguments[1]);
+      $("#login-button").html("LOG OUT");
+      $("#login-box").fadeOut();
+    }
+
+  }
 
 });
 

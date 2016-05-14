@@ -1,14 +1,20 @@
 <div id="block-1" class="josefin-font blocks cream">
-    <button type="button" class="close-button transparent">X</button>
-    <br>
-    <!-- <img class = "circular center" src="https://placehold.it/50x50" alt="#" /> -->
-    <%= image_tag "bill-clinton.jpeg", class: "circular center" %>
-    <p class = "block-title">MAXIMUS</p>
-    <p>LEGIO HISPANIA</p>
-    <button id="login-button">LOG IN</button>
+    <div class="section-top">
+      <button type="button" class="close-button transparent">X</button>
+      <br>
+      <!-- <img class = "circular center" src="https://placehold.it/50x50" alt="#" /> -->
+      <%= image_tag "bill-clinton.jpeg", class: "circular center" %>
+      <p class = "block-title">MAXIMUS</p>
+      <p>LEGIO HISPANIA</p>
+      <button id="login-button">LOG IN</button>
+      <div id="log-in-status">
+          You are logged in
+      </div>
+    </div>
     <!-- <input type="button" id="login-button" value="Go to Google" /> -->
 
     <%# button_tag "LOG IN", type: "button", id: "login-button" %>
+
     <div class="section-footer light-gray">
       <div>
         <p>LXIII</p>
@@ -23,13 +29,13 @@
         <p>RANK</p>
       </div>
     </div>
+
 </div>
 <div id="image-block" class="image blocks">
   <button type="button" class="close-button transparent">X</button>
       <iframe width="340" height="260"
         src="http://www.youtube.com/embed/9QS0q3mGPGg?autoplay=1">
     </iframe>
-  <button type="button" id="play-button">&#9658</button>
 </div>
 <div id="big-text-block" class="big-text blocks brown">
   <p class = "josefin-font big-text">

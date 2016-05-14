@@ -3,12 +3,30 @@
   <p>
     LOGIN FORM
   </p>
-  <div class="login-form">
+
+  <%= form_tag sessions_path, remote:true, id: "login-form" do %>
+
+    <div class="field">
+      <%= label_tag :email %><br>
+      <%= text_field_tag :email %>
+    </div>
+    <div class="field">
+      <%= label_tag :password %><br>
+      <%= password_field_tag :password %>
+    </div>
+    <div class="actions">
+      <%= submit_tag "Log In" %>
+      <button type="button" id="password-button">CANCEL</button>
+    </div>
+  <% end %>
+
+
+  <!-- <div class="login-form">
     <p>USERNAME: <input type="text" name="name" value=""></p>
     <p>PASSWORD: <input type="text" name="name" value=""></p>
   </div>
   <div class="login-buttons">
     <button type="button" id="login-button">LOGIN</button>
     <button type="button" id="password-button">CANCEL</button>
-  </div>
+  </div> -->
 </div>
