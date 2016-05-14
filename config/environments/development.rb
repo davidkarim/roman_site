@@ -44,7 +44,7 @@ Rails.application.configure do
   s3_credentials: {
     bucket: ENV.fetch('wyn-rails-class'),
     access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
-    secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+    secret_access_key: ENV.fetch('AWS_SECRET_ ACCESS_KEY'),
     s3_region: ENV.fetch('us-east-1'),
   }
 }
