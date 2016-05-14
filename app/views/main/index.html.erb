@@ -91,32 +91,5 @@
   <img class = "circular center" src="https://placehold.it/50x50" alt="#" />
 </div>
 
-<div id = "login-box" class="blocks cream">
-  <button id="login-button-close" type="button" class="close-button transparent">X</button><br>
-  <p>
-    LOGIN FORM
-  </p>
-  <div class="login-form">
-    <p>USERNAME: <input type="text" name="name" value=""></p>
-    <p>PASSWORD: <input type="text" name="name" value=""></p>
-  </div>
-  <div class="login-buttons">
-    <button type="button" id="login-button">LOGIN</button>
-    <button type="button" id="password-button">CANCEL</button>
-  </div>
-</div>
-
-<div id = "upload-box" class="blocks cream">
-  <button type="button" class="close-button transparent">X</button><br>
-  <p>
-    UPLOAD FORM
-  </p>
-  <div class="upload-form">
-    <p>File name: </p>
-    <p><input type="file" name="name" value=""></p>
-  </div>
-  <div class="login-buttons">
-    <button type="button" id="login-button">UPLOAD</button>
-    <button type="button" id="password-button">CANCEL</button>
-  </div>
-</div>
+<%= render 'loginform' %>
+<%= render 'uploadform' %>
