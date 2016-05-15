@@ -1,14 +1,23 @@
 <div id = "set-avatar-box" class="blocks cream">
-  <button type="button" class="close-button transparent">X</button><br>
+  <button id="set-avatar-button-close" type="button" class="close-button transparent">X</button><br>
   <p>
-    UPLOAD FORM
+    USER PROFILE
   </p>
-  <div class="upload-form">
-    <p>File name: </p>
-    <p><input type="file" name="name" value=""></p>
+
+<%= form_tag users_update_path, method: :post, remote:true, id: "user-form", authenticity_token: true, multipart: true do %>
+
+  <div class="field">
+    <%= label_tag :email %><br>
+    <%= text_field_tag :email %>
   </div>
-  <div class="login-buttons">
-    <button type="button" id="login-button">UPLOAD</button>
-    <button type="button" id="password-button">CANCEL</button>
+  <div class="field">
+    <%= label_tag :avatar %>
+    <%= file_field_tag :avatar %>
   </div>
+  <div class="form-actions">
+    <%= submit_tag "Update" %>
+    <button type="button" id="update-cancel-button">CANCEL</button>
+  </div>
+<% end %>
+
 </div>

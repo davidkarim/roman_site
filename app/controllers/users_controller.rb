@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def new
   end
 
@@ -15,5 +16,27 @@ class UsersController < ApplicationController
       end
     end
   end
+
+  def update
+    @user = current_user
+    # binding.pry
+    if @user.update(email: params[:email], avatar: params[:avatar])
+      success = 1
+      binding.pry
+      render "update"
+
+    else
+      success = 0
+      binding.pry
+      render  "update"
+    end
+  end
+
+  private
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def user_params
+      params.permit(:email, :avatar)
+    end
 
 end

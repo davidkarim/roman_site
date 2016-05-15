@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0' # A higher version of AWS causes a name error with Paperclip
 gem 'paperclip'
 
 # Use Unicorn as the app server

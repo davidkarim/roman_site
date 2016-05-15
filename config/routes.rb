@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get 'users/create'
 
+  post 'users/update'
+
   resources :sessions, only: [:new, :create, :destroy]
 
   get 'main/index'

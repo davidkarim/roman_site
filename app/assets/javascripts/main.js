@@ -1,14 +1,24 @@
 $(function() {
-  // alert("Page Load");
-
+  // Button click event handler
   $("#login-button").click(function() {
     console.log("Login button to display form has been clicked!!!");
-    // alert("Click event");
     $("#login-box").fadeIn();
+  });
+
+  // Button click event handler
+  $("#profile-button").click(function() {
+    console.log("Profile button to display form has been clicked!!!");
+    $("#set-avatar-box").fadeIn();
   });
 
   $("#login-button-close").click(function() {
     $("#login-box").fadeOut();
+  });
+  $("#login-cancel-button").click(function() {
+    $("#login-box").fadeOut();
+  });
+  $("#set-avatar-button-close").click(function() {
+    $("#set-avatar-box").fadeOut();
   });
 
   $("#login-form").on("ajax:success", updateTask);
