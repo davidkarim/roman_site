@@ -101,7 +101,7 @@
   top: 180px;
   left: 410px;
   width: 340px;
-  height: 220px;
+  height: 240px;
   z-index: 10;
   padding-left: 20px;
 }
@@ -112,7 +112,6 @@
   margin-top: 30px;
 }
 iframe {
-  display: none;
   position: absolute;
 }
 .secondary-section {
@@ -124,6 +123,9 @@ iframe {
   padding-right: 10px;
   font-size: 60%;
   color: grey;
+}
+#login-button, #profile-button {
+  display: inline;
 }
 .warfare-blocks span {
   float: right;
@@ -183,7 +185,6 @@ div#image-block #play-button {
   flex-grow: 1; /* Fill available space (place next element at bottom) */
 }
 #log-in-status {
-  display: none;
   margin-top: 15px;
   font-family: arial;
 }

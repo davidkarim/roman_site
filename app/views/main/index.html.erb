@@ -2,15 +2,25 @@
     <div class="section-top">
       <button type="button" class="close-button transparent">X</button>
       <br>
-      <!-- <img class = "circular center" src="https://placehold.it/50x50" alt="#" /> -->
-      <%= image_tag "bill-clinton.jpeg", class: "circular center" %>
+      <% if current_user %>
+        <%= image_tag @user.avatar.url, class: "circular center" %>
+      <% else %>
+        <%= image_tag "bill-clinton.jpeg", class: "circular center" %>
+      <% end %>
+
       <p class = "block-title">MAXIMUS</p>
       <p>LEGIO HISPANIA</p>
-      <button id="login-button">LOG IN</button>
-      <button id="profile-button">PROFILE</button>
-      <div id="log-in-status">
-          You are logged in
-      </div>
+      <% if current_user %>
+        <%= button_to "LOG OUT", logout_path, id: "logout-button", method: :get %>
+        <button id="profile-button">PROFILE</button>
+        <div id="log-in-status">
+            You are logged in: <%= current_user.email %>
+        </div>
+      <% else %>
+        <button id="login-button">LOG IN</button>
+        <button id="profile-button">PROFILE</button>
+      <% end %>
+
     </div>
     <!-- <input type="button" id="login-button" value="Go to Google" /> -->
 
@@ -34,9 +44,13 @@
 </div>
 <div id="image-block" class="image blocks">
   <button type="button" class="close-button transparent">X</button>
-      <iframe width="340" height="260"
-        src="http://www.youtube.com/embed/9QS0q3mGPGg?autoplay=1">
-    </iframe>
+    <% if current_user %>
+      <iframe width="338" height="248"
+        src="<%= current_user.video_url %>">
+      </iframe>
+    <% else %>
+      <%= image_tag "gladiator.jpeg" %>
+    <% end %>
 </div>
 <div id="big-text-block" class="big-text blocks brown">
   <p class = "josefin-font big-text">

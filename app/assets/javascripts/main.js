@@ -34,11 +34,11 @@ $(function() {
       $("#login-box").fadeOut();
     } else {
       $("#log-in-status").show();
+      $("#profile-button").show();
       $("#log-in-status").html(arguments[1]);
       $("#login-button").html("LOG OUT");
       $("#login-box").fadeOut();
     }
-
   }
 
 });

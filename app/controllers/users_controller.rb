@@ -20,15 +20,15 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     # binding.pry
-    if @user.update(email: params[:email], avatar: params[:avatar])
-      success = 1
-      binding.pry
-      render "update"
+    if @user.update(user_params)
+      @success = 1
+      # binding.pry
+      redirect_to root_url
 
     else
-      success = 0
-      binding.pry
-      render  "update"
+      @success = 0
+      # binding.pry
+      redirect_to root_url
     end
   end
 
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.permit(:email, :avatar)
+      params.permit(:email, :avatar, :video_url)
     end
 
 end

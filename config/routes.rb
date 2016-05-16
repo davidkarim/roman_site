@@ -6,9 +6,11 @@ Rails.application.routes.draw do
 
   post 'users/update'
 
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: [:new, :create]
 
   get 'main/index'
+
+  get 'logout', to: 'sessions#destroy', as: 'logout'
 
   # get 'sessions/new'
   # get 'sessions/destroy'
