@@ -20,6 +20,9 @@ $(function() {
   $("#set-avatar-button-close").click(function() {
     $("#set-avatar-box").fadeOut();
   });
+  $("#update-cancel-button").click(function() {
+    $("#set-avatar-box").fadeOut();
+  });
 
   $("#login-form").on("ajax:success", updateTask);
 
