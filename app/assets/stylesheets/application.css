@@ -22,3 +22,31 @@
    max-height: 1000px;
    font-family: 'Josefin Slab', serif;
  }
+
+ .grad {
+     background: #E3D4CA; /* For browsers that do not support gradients */
+     background: -webkit-linear-gradient(#E3D4CA, #BF8F71); /* For Safari 5.1 to 6.0 */
+     background: -o-linear-gradient(#E3D4CA, #BF8F71); /* For Opera 11.1 to 12.0 */
+     background: -moz-linear-gradient(#E3D4CA, #BF8F71); /* For Firefox 3.6 to 15 */
+     background: linear-gradient(#E3D4CA, #BF8F71); /* Standard syntax */
+ }
+ 
+ @media (max-width: 1200px) {
+   body {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     flex-wrap: wrap;
+     max-height: 1600px;
+   }
+ }
+
+ @media (max-width: 767px) {
+   body {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     flex-wrap: wrap;
+     max-height: 2900px;
+   }
+ }
