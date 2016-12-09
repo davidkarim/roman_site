@@ -1,8 +1,8 @@
 == README
 
-Ruby on Rails version of static HTML site with various dynamic elements added.
+[![Build Status](https://opsjenkins.ksd1446.com/buildStatus/icon?job=Rails_Build_test)](https://opsjenkins.ksd1446.com/job/Rails_Build_test/)
 
-Attempting automatic build with Jenkins server....
+Ruby on Rails version of static HTML site with various dynamic elements added.
 
 Things you may want to cover:
 
