@@ -1,27 +1,19 @@
 == README
 
-[![Build Status](https://opsjenkins.ksd1446.com/buildStatus/icon?job=Rails_Build_test)](https://opsjenkins.ksd1446.com/job/Rails_Build_test/)
+[![Build Status](http://ec2-52-87-154-254.compute-1.amazonaws.com/job/roman_site_build/badge/icon)](http://ec2-52-87-154-254.compute-1.amazonaws.com/job/roman_site_build)
 
 Ruby on Rails version of static HTML site with various dynamic elements added.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.3 or above recommended
 
-* System dependencies
+* Run bundle install to install gems
 
-* Configuration
+* Run rake db:migrate to migrate database
 
-* Database creation
+* Test suite pending
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Deployment instructions pending
 
 
