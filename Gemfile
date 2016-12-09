@@ -34,6 +34,13 @@ gem 'paperclip'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Generates XML Reports of test runs; useful when using Jenkins
+#gem 'ci_reporter'
+gem 'ci_reporter_minitest'
+
+# Minitest gem, allows the use of rails test command
+gem 'minitest-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
