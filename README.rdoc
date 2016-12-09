@@ -2,7 +2,7 @@
 
 Ruby on Rails version of static HTML site with various dynamic elements added.
 
-Attempting automatic build with Jenkins.
+Attempting automatic build with Jenkins server.
 
 Things you may want to cover:
 
